@@ -1,0 +1,115 @@
+input {
+    border: 1px solid #696969;
+    display: block;
+    font-size: 1em;
+    margin: 8%;
+    padding: 3%;
+    text-align: left;
+    width: 80%;
+  }
+  
+  label {
+    text-align: right;
+    display: block;
+    clear: both;
+    float: left;
+    margin: 8%;
+  }
+  
+  form {
+    margin-top: 15px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .Signin {
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .signin-button {
+    background-color: #e69510;
+  }
+  
+  .signin__demo-creds {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin: 8%;
+    color: #008000;
+  }
+  
+  @media (min-width: 500px) {
+    .Signin {
+      max-width: 300px;
+    };
+  }
+  
+  @media (min-width: 768px) {
+    header {
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      padding: 10%;
+    }
+  
+    input {
+      border: 1px solid #696969;
+      display: block;
+      font-size: 1em;
+      margin: 0px 0px 25px 0px;
+      padding: 20px;
+      text-align: left;
+      width: 100%;
+    }
+  
+    label {
+      text-align: left;
+      display: block;
+      clear: both;
+      float: left;
+      margin: 0px;
+      margin-bottom: 20px;
+    }
+  
+    .signin__button {
+      margin: 10px 0px 10px 0px;
+    }
+  
+    .signin-button {
+      width: 25%;
+      margin: auto;
+    }
+  
+    .signin-field {
+      width: 50%;
+      margin: auto;
+    }
+  
+    .signin-form {
+      margin: 1%;
+      padding: 10%;
+      padding-top: 0px;
+    }
+  
+    .signin__demo-creds {
+      font-size: 14px;
+      text-align: center;
+      display: block;
+      margin: 0px;
+      color: #008000;
+    }
+  
+    .Signin {
+      max-width: 700px;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .Signin {
+      max-width: 1000px;
+    }
+  }

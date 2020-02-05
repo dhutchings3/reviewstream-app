@@ -1,0 +1,30 @@
+a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .Review {
+    border: 1px solid black;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-width: 450px;
+    background-color: #d1d1d1;
+  }
+  
+  .Review:hover {
+    background-color: #e69510;
+    border: 1px solid #e69510;
+  }
+  
+  .review-link {
+    color: black;
+  }
+  
+  .review-link:visited {
+    color: black;
+  }
