@@ -19,7 +19,7 @@ class UserSignUp extends React.Component {
 
   handleRegistrationSuccess = () => {
     const { location, history } = this.props
-    const destination = (location.state || {}).from || '/login'
+    const destination = (location.state || {}).from || '/signin'
     history.push(destination)
   };
 
@@ -103,7 +103,7 @@ class UserSignUp extends React.Component {
               </button>
             </div>
             <div className='signup-field'>
-              <p className='signup-field'>Already have an account? <Link className='login-link' to='/signin'>Sign In</Link></p>
+              <p className='signup-field'>Already have an account? <Link className='signin-link' to='/signin'>Sign In</Link></p>
             </div>
         </form>
       </div>

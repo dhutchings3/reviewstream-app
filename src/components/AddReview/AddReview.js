@@ -47,6 +47,7 @@ class AddReview extends React.Component {
               name='show_name'
               id='show_name'
               placeholder='Game of Thrones'
+              required
             ></input>
           </div>
           <div>
@@ -56,11 +57,12 @@ class AddReview extends React.Component {
               name='season'
               id='season'
               placeholder='4'
+              required
             ></input>
           </div>
           <div>
             <label htmlFor='streaming_service'>Streaming Service</label>
-            <select name='streaming_service'>
+            <select name='streaming_service' required>
               <option value=''>Select a Streaming Service</option>
               <option value='HBO'>HBO Now</option>
               <option value='Netflix'>Netflix</option>
@@ -77,11 +79,12 @@ class AddReview extends React.Component {
               name='review'
               id='review'
               placeholder='It was one of my favorites...'
+              required
             ></input>
           </div>
           <div>
             <label htmlFor='rating'>Rating</label>
-            <select name='rating'>
+            <select name='rating' required>
               <option value=''>Select a Rating</option>
               <option value='1'>1 Star</option>
               <option value='2'>2 Stars</option>

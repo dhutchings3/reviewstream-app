@@ -39,7 +39,7 @@ input {
     display: block;
     margin-top: 20px;
     margin: 8%;
-    color: #008000;
+    color: darkorange;
   }
   
   @media (min-width: 500px) {
@@ -100,7 +100,7 @@ input {
       text-align: center;
       display: block;
       margin: 0px;
-      color: #008000;
+      color: darkorange;
     }
   
     .Signin {

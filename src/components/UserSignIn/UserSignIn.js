@@ -45,7 +45,7 @@ class UserSignIn extends React.Component {
         <h1>Sign In</h1>
         <div className='signin__demo-creds'>
           <strong>
-            Test login: netflixer / Password1!
+            Test User: netflixer / Password1!
           </strong>
         </div>
         <form

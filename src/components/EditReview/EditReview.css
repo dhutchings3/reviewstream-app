@@ -19,7 +19,7 @@ input {
   }
   
   .update-button {
-    background-color: #e69510
+    background-color: sienna;
   }
   
   @media (min-width: 500px) {

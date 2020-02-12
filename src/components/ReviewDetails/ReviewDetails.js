@@ -45,7 +45,7 @@ class ReviewDetails extends React.Component{
     return (
       <div>
         <div className='review-details'>
-          <h2>{this.context.setSingleReview.show_name}</h2>
+          <h2>{this.context.singleReview.show_name}</h2>
           <h3>{this.context.singleReview.season}</h3>
           <h3>{this.context.singleReview.streaming_service}</h3>
           <p>Review: {this.context.singleReview.review}</p>

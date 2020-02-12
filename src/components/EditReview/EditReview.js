@@ -18,8 +18,11 @@ class EditReview extends React.Component {
   componentDidMount() {
     let id = this.props.match.params.id
     ReviewsApiService.getReviewById(id)
+    // console.log(data)
       .then(data => {
+        console.log(data)
         this.context.setSingleReview(data)
+        console.log(this.context.singleReview)
       })
       .catch(error => {
         this.setState({
@@ -31,7 +34,9 @@ class EditReview extends React.Component {
   updateReview = (e) => {
     e.preventDefault()
     const userId = Number(TokenService.getUserId())
+    console.log(userId)
     const id = this.props.match.params.id
+    console.log(id)
     const { show_name, season, streaming_service, review, rating } = e.target
     let updatedReview = {}
 
@@ -71,7 +76,7 @@ class EditReview extends React.Component {
   }
 
   render() {
-
+    const review = this.context.singleReview
     return (
       <div className='EditListing'>
         <h2>Edit Review</h2>
@@ -82,7 +87,7 @@ class EditReview extends React.Component {
               type='text'
               name='show_name'
               id='show_name'
-              defaultValue={'show name'}
+              defaultValue={review.show_name}
             ></input>
           </div>
           <div>
@@ -91,12 +96,12 @@ class EditReview extends React.Component {
               type='text'
               name='season'
               id='season'
-              defaultValue={'season'}
+              defaultValue={review.season}
             ></input>
           </div>
           <div>
             <label htmlFor='streaming_service'>Streaming Service</label>
-            <select name='streaming_service'>
+            <select defaultValue={review.streaming_service} name='streaming_service'>
               <option value=''>Select a Streaming Service</option>
               <option value='HBO'>HBO Now</option>
               <option value='Netflix'>Netflix</option>
@@ -112,12 +117,12 @@ class EditReview extends React.Component {
               type='text'
               name='review'
               id='review'
-              defaultValue={'review'}
+              defaultValue={review.review}
             ></input>
           </div>
           <div>
             <label htmlFor='rating'>Rating</label>
-            <select name='rating'>
+            <select defaultValue={review.rating} name='rating'>
               <option value=''>Select a Rating</option>
               <option value='1'>1 Star</option>
               <option value='2'>2 Stars</option>

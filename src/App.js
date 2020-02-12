@@ -21,7 +21,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       error: null,
-      reivews: [],
+      reviews: [],
       singleReview: [],
       userId: 1,
       userData: [],
