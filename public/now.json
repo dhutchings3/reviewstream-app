@@ -1,9 +1,14 @@
 {
-    "version": 2,
-    "alias": "dhutchings36-reviewstream-app",
-    "name": "reviewstream-app",
-    "routes": [
-        { "handle": "filesystem" },
-        { "src": "/.*", "dest": "/index.html" }
-    ]
-  }
+  "version": 2,
+  "name": "reviewstream-app",
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
+}
