@@ -106,10 +106,10 @@ class App extends React.Component {
         return (
           <UpdateReviewContext.Provider value={contextValue}>
             <main className='App'>
-              <Nav drawerClickHandler={this.drawerToggleClickHandler}/>
+              <Nav headerClickHandler={this.headerToggleClickHandler}/>
               <Header
                 show={this.state.headerOpen}
-                toggle={this.drawerToggleClickHandler}
+                toggle={this.headerToggleClickHandler}
               />
               {backdrop}
               <section className='content'>
