@@ -17,8 +17,8 @@ a {
   }
   
   .Review:hover {
-    background-color: lightgoldenrodyellow;
-    border: 1px solid lightgoldenrodyellow;
+    background-color: sienna;
+    border: 1px solid sienna;
   }
   
   .review-link {
@@ -27,4 +27,14 @@ a {
   
   .review-link:visited {
     color: black;
+  }
+
+  .review-text {
+    display: none
+  }
+
+  @media (min-width: 768px) {
+    .review-text {
+      display: block;
+    }
   }

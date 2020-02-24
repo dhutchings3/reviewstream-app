@@ -19,6 +19,10 @@ input {
   .error-message {
     color: red;
   }
+
+  .invalid-feedback {
+    color: red;
+  }
   
   .signup-button {
     background-color: #e69510;

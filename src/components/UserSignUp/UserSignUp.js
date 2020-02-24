@@ -13,9 +13,47 @@ class UserSignUp extends React.Component {
 
   state = {
     password:'',
-    confirmPassword: '',
+    passwordError: '',
     error: null
   }
+
+  handleChange = e => {
+    this.setState({
+      password: e.target.value
+    }, () =>{ this.validatePassword();
+    });
+  };
+
+  validatePassword = () => {
+    const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
+    const { password } = this.state;
+    if (password.length < 8) {
+      this.setState({
+        passwordError: 'Password must be at least 8 characters'
+      })
+    }
+    else if (password.length > 72) {
+      this.setState({
+        passwordError: 'Password must be less than 72 characters'
+      })
+    }
+    else if (password.startsWith(' ') || password.endsWith(' ')) {
+      this.setState({
+        passwordError: 'Password must not start or end with empty spaces'
+      })
+    }
+    else if (!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
+      this.setState({
+        passwordError: 'Password must contain 1 uppercase, lowercase, number and special character'
+      })
+    }
+    else {
+      this.setState({
+        passwordError: null
+      })
+    }
+  }
+
 
   handleRegistrationSuccess = () => {
     const { location, history } = this.props
@@ -44,6 +82,9 @@ class UserSignUp extends React.Component {
   };
 
   render() {
+    const { password } = this.state;
+    const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
+    const isEnabled = password.length > 8 && password.length < 72 && REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password) && !password.startsWith(' ') && !password.endsWith(' ')
     return (
       <div className='SignUp'>
         <h1>Sign Up</h1>
@@ -86,8 +127,10 @@ class UserSignUp extends React.Component {
                 id='password'
                 name='password'
                 placeholder='Password'
+                onChange={this.handleChange}
               />
             </div>
+            <div className='invalid-feedback'>{this.state.passwordError}</div>
             <div className='signup__password-req'>
               <strong>
                 <span className='error-message'>{this.state.error}</span><br/>
@@ -98,7 +141,7 @@ class UserSignUp extends React.Component {
               </strong>
             </div>
             <div className='signup__button'>
-              <button type='submit' value='Signup' className='signup-button'>
+              <button type='submit' value='Signup' className='signup-button' disabled={!isEnabled}>
                 Sign Up
               </button>
             </div>

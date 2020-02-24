@@ -25,7 +25,8 @@ class App extends React.Component {
       singleReview: [],
       userId: 1,
       userData: [],
-      headerOpen: false
+      headerOpen: false,
+
     }
     this.headerToggleClickHandler = this.headerToggleClickHandler.bind(this)
   }
