@@ -12,8 +12,8 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background: darkgray;
-    padding-top: 20px;
+    background: darkred;
+    padding-top: 25px;
   }
   
   .navbar-navigation {
@@ -24,7 +24,7 @@
   }
   
   .navbar-logo {
-    color: rgb(132, 11, 11);
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
     margin-left: 1rem;
@@ -32,7 +32,7 @@
   }
   
   .navbar-nav-items {
-    color: black;
+    color: white;
     text-decoration: none;
   }
   
