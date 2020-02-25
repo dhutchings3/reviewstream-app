@@ -16,14 +16,11 @@ class ReviewList extends React.Component {
   static contextType = UpdateReviewContext
 
   componentDidMount() {
-    console.log(Number(TokenService.getUserId()))
     let userId = Number(TokenService.getUserId())
-    console.log(userId)
     // let userId = 1
     ReviewsApiService.getReviewsForUser(userId)
       .then(data => {
         this.context.setReviews(data)
-        console.log(data)
       })
       .catch(error => {
         this.setState({

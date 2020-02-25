@@ -18,11 +18,8 @@ class EditReview extends React.Component {
   componentDidMount() {
     let id = this.props.match.params.id;
     ReviewsApiService.getReviewById(id)
-      // console.log(data)
       .then(data => {
-        console.log(data);
         this.context.setSingleReview(data);
-        console.log(this.context.singleReview);
       })
       .catch(error => {
         this.setState({
@@ -34,9 +31,7 @@ class EditReview extends React.Component {
   updateReview = e => {
     e.preventDefault();
     const userId = Number(TokenService.getUserId());
-    console.log(userId);
     const id = this.props.match.params.id;
-    console.log(id);
     const { show_name, season, streaming_service, review, rating } = e.target;
     let updatedReview = {};
 
