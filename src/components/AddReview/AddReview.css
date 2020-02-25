@@ -20,7 +20,7 @@ input {
   }
   
   .add-button {
-    background-color: darkred;
+    background-color: #EB571C;
   }
   
   @media (min-width: 500px) {
@@ -42,7 +42,7 @@ input {
       border: 1px solid #696969;
       display: block;
       font-size: 1em;
-      /* margin: 0px 0px 25px 0px; */
+      margin: 0px 0px 25px 0px;
       padding: 20px;
       text-align: left;
       width: 75%;
@@ -82,7 +82,7 @@ input {
     .add-review-form {
       padding: 30%;
       padding-top: 0px;
-      position: fixed
+      /* position: fixed */
     }
   
     .AddReview {

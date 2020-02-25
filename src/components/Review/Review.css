@@ -21,8 +21,8 @@ a {
   }
   
   .Review:hover {
-    background-color: sienna;
-    border: 1px solid sienna;
+    background-color: #FF9500;
+    border: 1px solid #FF9500;
   }
   
   .review-link {

@@ -6,8 +6,8 @@ const Reviews = ({ reviews, deleteReview }) => {
       return (
         <div className="collection-review" key={review.id}>
           <h2>{review.showName}</h2>
-            <p>{review.text}</p>
-            <p>{review.rating}</p>
+          <p>{review.text}</p>
+          <p>{review.rating}</p>
           <button
             onClick={() => {
               deleteReview(review.id);

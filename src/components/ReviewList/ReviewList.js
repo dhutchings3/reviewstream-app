@@ -33,18 +33,17 @@ class ReviewList extends React.Component {
   }
 
   render() {
-    // console.log(this.context, 'what is returned')
     return (
       <div>
         <h1>Your Reviews</h1>
-          {this.context.reviews.map(i => (
-            <li key={i.id}>
-              <Review
-                id={i.id}
-                data={i}
-              />
-            </li>
-          ))}
+        {this.context.reviews.map(i => (
+          <li key={i.id}>
+            <Review
+              id={i.id}
+              data={i}
+            />
+          </li>
+        ))}
       </div>
     )
   }

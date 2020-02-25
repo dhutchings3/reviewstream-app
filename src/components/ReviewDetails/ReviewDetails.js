@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import UpdateReviewContext from '../../contexts/UpdateReviewContext';
 import ReviewsApiService from '../../services/reviews-api-service';
 import TokenService from '../../services/token-service';
+import './ReviewDetails.css'
 
 class ReviewDetails extends React.Component{
   constructor(props) {
