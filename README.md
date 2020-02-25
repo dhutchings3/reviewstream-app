@@ -13,4 +13,4 @@ Reviewstream was built using React and CSS.
 ## API Repo
 https://github.com/dhutchings3/reviewstream-app-api
 
-![image](https://app.png)
+![image](https://github.com/dhutchings3/reviewstream-app/blob/master/app.png)
